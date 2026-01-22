@@ -1,0 +1,10 @@
+.fab.fa-gitee::before {
+  content: "";
+  background-image: url("/img/gitee.svg");
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: -0.125em;
+}
