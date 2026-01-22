@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>使用 Hexo 和 GitHub 创建的个人博客 | 拾柒的个人博客</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="theme-color" content="#10b981">
+
+  <link rel="canonical" href="http://example.com/2026/01/21/Create-a-personal-blog/">
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  <meta name="description" content="安装 git 工具可以通过 git官方安装，也可以使用scoop来安装  输入以下命令检查 git安装是否成功： git -v   安装 nodejs使用 Scoop安装nvm（node 包管理工具）   使用命令nvm install 「版本号」来安装nodejs，使用nvm use 「版本号」指定使用的nodejs，使用node -v查看 node 版本  安装 Hexo使用 如下命令安装he">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Hexo 和 GitHub 创建的个人博客">
+<meta property="og:url" content="http://example.com/2026/01/21/Create-a-personal-blog/index.html">
+<meta property="og:site_name" content="拾柒的个人博客">
+<meta property="og:description" content="安装 git 工具可以通过 git官方安装，也可以使用scoop来安装  输入以下命令检查 git安装是否成功： git -v   安装 nodejs使用 Scoop安装nvm（node 包管理工具）   使用命令nvm install 「版本号」来安装nodejs，使用nvm use 「版本号」指定使用的nodejs，使用node -v查看 node 版本  安装 Hexo使用 如下命令安装he">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768996785814-4f0b7690-2ab9-4510-a16a-dcb64923c5bc.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768996848890-ff7d482a-4e54-472a-be7b-f13cb4b3da7c.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768996937158-ecd435e5-3705-4502-9a14-862335406cbb.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768996966396-e5bfa283-2e89-4b18-ad46-25ff115b79b7.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768997130676-1d760297-70b9-46c4-ac43-8679167afd12.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768997189646-4c0c11b8-cdf2-494c-91cd-fc3eb63b70c0.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768997275272-af8296a2-001b-4786-a61d-f66744437b33.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768997700863-de3448dd-0e8e-4569-9665-0d3154ed5021.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768997760904-014a64ee-7ce6-42e5-886c-be4ef50d09a0.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768997817573-3b280d40-ae56-41a9-bb11-bab8197674cc.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768998271196-9da2e81b-726a-47fd-8eba-7b14c53b3625.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768998589607-01fc8868-bcdf-4775-b6d7-e9d6d9e98863.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768998963685-71244c48-f6ed-4da1-b5cc-23a7ceee2971.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768999314296-8b27325c-280d-4150-b05c-83f9e7b1cc5e.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768999330867-27b428e1-fa42-4182-9241-94fb00ec4abf.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768958750231-7d765986-d6c5-4463-8059-1c1c01473fbf.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768999670877-43ffb6eb-acee-4d4e-94f4-d8ade4d66060.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768999760455-30ed9ec6-05fa-44d0-b852-3b97cbd23476.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769000119753-d013dfc8-b923-48c3-a39a-98575c98a74d.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769000321667-b3569a6e-c77e-44e1-a205-e3bcd6b10b57.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769000832140-39069643-6b55-4433-9c86-3441a990ada0.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769001112696-376891a1-4dd3-4cc4-a7c7-41e6246fd30e.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769042943509-203f194a-57e6-49e4-88d9-18d7ee182c01.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769001294996-2ff049bf-1169-4999-a843-a1c132c56a55.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769001919717-76924e8d-ee7d-4ff2-9b4a-04e4f4a6fa5c.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769043368009-42415742-86fd-49e4-8d8d-87b3031b32a4.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769044651427-dc620b81-4987-4734-8aa0-a93d2bfb7abf.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769043465760-3b45b0cd-af71-48ad-8e52-3dd50c7c8342.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769005305193-27c3ac53-14c5-4a61-9bd5-663670625dff.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769005629609-15bac29e-057a-4ad6-b1ae-329fc5e447fd.png">
+<meta property="og:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1769043615139-2cce5b1a-e8fa-420e-9d93-45729c57069e.png">
+<meta property="article:published_time" content="2026-01-21T12:54:03.000Z">
+<meta property="article:modified_time" content="2026-01-22T01:18:22.719Z">
+<meta property="article:author" content="FbyBruce">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2026/01/21/Create-a-personal-blog/1768996785814-4f0b7690-2ab9-4510-a16a-dcb64923c5bc.png">
+  <meta name="generator" content="Hexo 7.3.0">
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/01/21/Create-a-personal-blog/"},"headline":"使用 Hexo 和 GitHub 创建的个人博客","description":"安装 git 工具可以通过 git官方安装，也可以使用scoop来安装 输入以下命令检查 git安装是否成功： git -v 安装 nodejs使用 Scoop安装nvm（node 包管理工具） 使用命令nvm install 「版本号」来安装nodejs，使用nvm use 「版本号」指定使用的nodejs，使用no","datePublished":"2026-01-21T12:54:03.000Z","dateModified":"2026-01-22T01:18:22.719Z","author":{"@type":"Person","name":"FbyBruce"},"publisher":{"@type":"Organization","name":"拾柒的个人博客","logo":{"@type":"ImageObject","url":"http://example.com/favicon.ico"}}}
+</script>
+
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  <style>
+    :root {
+      --sea-color-primary: #10b981;
+      
+    }
+  </style>
+
+  
+<script src="/js/theme_mode.js"></script>
+
+</head>
+<body>
+  <header class="sea-header">
+    <nav class="sea-nav-wrap">
+  <div class="sea-nav-logo" title="">
+    <a href="/">拾柒的个人博客</a>
+  </div>
+  <div class="sea-nav-menus">
+    <div id="sea-nav-toggle">
+      <svg t="1716965724278" class="sea-svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10878" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M950.857143 768v73.142857c0 20.004571-16.566857 36.571429-36.571429 36.571429H109.714286c-20.004571 0-36.571429-16.566857-36.571429-36.571429v-73.142857c0-20.004571 16.566857-36.571429 36.571429-36.571429h804.571428c20.004571 0 36.571429 16.566857 36.571429 36.571429z m0-292.571429v73.142858c0 20.004571-16.566857 36.571429-36.571429 36.571428H109.714286c-20.004571 0-36.571429-16.566857-36.571429-36.571428v-73.142858c0-20.004571 16.566857-36.571429 36.571429-36.571428h804.571428c20.004571 0 36.571429 16.566857 36.571429 36.571428z m0-292.571428v73.142857c0 20.004571-16.566857 36.571429-36.571429 36.571429H109.714286c-20.004571 0-36.571429-16.566857-36.571429-36.571429V182.857143c0-20.004571 16.566857-36.571429 36.571429-36.571429h804.571428c20.004571 0 36.571429 16.566857 36.571429 36.571429z" p-id="10879"></path></svg>
+    </div>
+
+    <div id="sea-nav-dimmer"></div>
+<div class="sea-menu-wrap">
+  
+    <a
+      class="sea-menu-link "
+      
+      href="/archives/"
+    >
+      归档
+    </a>
+  
+    <a
+      class="sea-menu-link "
+      
+      href="/friends/"
+    >
+      友链
+    </a>
+  
+    <a
+      class="sea-menu-link "
+      
+      href="/messages/"
+    >
+      留言
+    </a>
+  
+    <a
+      class="sea-menu-link "
+      
+      href="/about/"
+    >
+      关于
+    </a>
+  
+
+  <span class="sea-menu-sep">|</span>
+
+  
+  
+
+  
+    <a href="/search" title="Search">
+  <span class="sea-menu-icon" id="sea-search-icon">
+    <svg t="1725410662861" class="sea-svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5552" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M400.085333 151.210667c-89.059556 0-172.672 47.616-218.197333 124.273777a14.222222 14.222222 0 1 0 24.462222 14.535112c40.433778-68.067556 114.659556-110.364444 193.735111-110.364445a14.222222 14.222222 0 1 0 0-28.444444zM170.197333 336.298667a14.236444 14.236444 0 0 0-17.080889 10.609777c-4.252444 18.147556-6.656 29.397333-6.656 49.592889a14.222222 14.222222 0 1 0 28.444445 0c0-17.137778 1.92-26.083556 5.902222-43.121777a14.222222 14.222222 0 0 0-10.609778-17.080889z" fill="" p-id="5553"></path><path d="M947.384889 821.944889L717.809778 592.384a70.584889 70.584889 0 0 0-16.64-12.472889 346.254222 346.254222 0 0 0 47.36-175.089778c0-192.142222-156.302222-348.444444-348.444445-348.444444-192.128 0-348.444444 156.302222-348.444444 348.444444s156.316444 348.430222 348.444444 348.430223c68.408889 0 132.209778-19.882667 186.083556-54.058667 2.915556 4.821333 6.570667 9.472 10.951111 13.852444l229.575111 229.589334a84.849778 84.849778 0 0 0 60.359111 24.974222 84.821333 84.821333 0 0 0 60.344889-24.974222 84.778667 84.778667 0 0 0 24.974222-60.330667 84.920889 84.920889 0 0 0-24.988444-60.359111zM108.529778 404.835556c0-160.768 130.787556-291.555556 291.555555-291.555556 160.782222 0 291.555556 130.787556 291.555556 291.555556 0 160.782222-130.801778 291.541333-291.555556 291.541333-160.768 0-291.555556-130.759111-291.555555-291.541333z m798.620444 497.578666c-10.766222 10.723556-29.496889 10.723556-40.248889 0L637.340444 672.839111c-1.991111-1.976889-2.730667-3.299556-2.830222-3.299555 0.042667-0.611556 0.824889-6.471111 17.080889-22.698667 16.213333-16.256 22.072889-16.995556 22.257778-17.109333 0.369778 0.113778 1.692444 0.853333 3.740444 2.887111l229.546667 229.560889c5.390222 5.390222 8.334222 12.529778 8.334222 20.138666a28.401778 28.401778 0 0 1-8.32 20.096z" p-id="5554"></path></svg>
+  </span>
+</a>
+  
+
+
+  <span class="sea-menu-icon" id="sea-theme-dark">
+    <svg t="1725413107294" class="sea-svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10118" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M557.553778 976.355556c-257.265778 0-466.56-207.160889-466.56-464.426667 0-253.923556 206.577778-464.284444 460.501333-464.284445h0.355556c10.766222 0 20.622222 3.953778 25.443555 13.610667 4.878222 9.756444 3.740444 20.394667-2.915555 29.027556-55.722667 72.220444-85.162667 158.108444-85.162667 249.372444 0 225.891556 183.779556 409.386667 409.671111 409.386667l5.248-0.256c10.325333-0.142222 20.977778 5.859556 25.841778 15.644444a28.302222 28.302222 0 0 1-2.915556 30.051556C837.902222 910.08 703.203556 976.355556 557.553778 976.355556zM495.274667 105.016889C299.192889 135.281778 147.882667 306.161778 147.882667 509.809778c0 225.877333 183.779556 409.656889 409.671111 409.656889 108.686222 0 210.403556-42.055111 286.577778-116.977778-231.566222-27.192889-411.804444-224.625778-411.804445-463.36 0-83.427556 21.617778-163.299556 62.947556-234.112z" fill="" p-id="10119"></path><path d="M578.830222 879.132444c-186.865778 0-345.784889-133.418667-377.841778-317.269333a14.222222 14.222222 0 1 1 28.017778-4.878222c29.681778 170.183111 176.810667 293.703111 349.824 293.703111a14.222222 14.222222 0 1 1 0 28.444444zM209.991111 531.2c-7.537778 0-13.838222-6.997333-14.193778-14.606222-0.312889-6.584889-0.483556-13.795556-0.483555-20.465778 0-7.864889 6.357333-14.492444 14.222222-14.492444s14.222222 6.229333 14.222222 14.094222c0 6.229333 0.170667 13.425778 0.455111 19.584 0.369778 7.850667-5.674667 15.886222-13.525333 15.886222h-0.696889z" fill="" p-id="10120"></path><path d="M622.350222 309.930667m-25.344 0a25.344 25.344 0 1 0 50.688 0 25.344 25.344 0 1 0-50.688 0Z" fill="" p-id="10121"></path><path d="M787.072 188.273778m-25.344 0a25.344 25.344 0 1 0 50.688 0 25.344 25.344 0 1 0-50.688 0Z" fill="" p-id="10122"></path><path d="M731.960889 415.303111m-25.344 0a25.344 25.344 0 1 0 50.688 0 25.344 25.344 0 1 0-50.688 0Z" p-id="10123"></path></svg>
+  </span>
+  <span class="sea-menu-icon" id="sea-theme-light">
+    <svg t="1725410359322" class="sea-svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4274" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M512 768c-141.376 0-256-114.624-256-256s114.624-256 256-256 256 114.624 256 256-114.624 256-256 256z m0-85.333333a170.666667 170.666667 0 1 0 0-341.333334 170.666667 170.666667 0 0 0 0 341.333334zM469.333333 85.333333a42.666667 42.666667 0 1 1 85.333334 0v85.333334a42.666667 42.666667 0 1 1-85.333334 0V85.333333z m0 768a42.666667 42.666667 0 1 1 85.333334 0v85.333334a42.666667 42.666667 0 1 1-85.333334 0v-85.333334zM85.333333 554.666667a42.666667 42.666667 0 1 1 0-85.333334h85.333334a42.666667 42.666667 0 1 1 0 85.333334H85.333333z m768 0a42.666667 42.666667 0 1 1 0-85.333334h85.333334a42.666667 42.666667 0 1 1 0 85.333334h-85.333334zM161.834667 222.165333a42.666667 42.666667 0 0 1 60.330666-60.330666l64 64a42.666667 42.666667 0 0 1-60.330666 60.330666l-64-64z m576 576a42.666667 42.666667 0 0 1 60.330666-60.330666l64 64a42.666667 42.666667 0 0 1-60.330666 60.330666l-64-64z m-515.669334 64a42.666667 42.666667 0 0 1-60.330666-60.330666l64-64a42.666667 42.666667 0 0 1 60.330666 60.330666l-64 64z m576-576a42.666667 42.666667 0 0 1-60.330666-60.330666l64-64a42.666667 42.666667 0 0 1 60.330666 60.330666l-64 64z" p-id="4275"></path></svg>
+  </span>
+
+  <span id="sea-menu-close-icon">
+    <svg t="1725435896874" class="sea-svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4408" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M556.8 512l265.6-265.6c12.8-12.8 12.8-32 0-44.8s-32-12.8-44.8 0L512 467.2 246.4 201.6c-12.8-12.8-32-12.8-44.8 0s-12.8 32 0 44.8l265.6 265.6-265.6 265.6c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 12.8 9.6 22.4 9.6s16-3.2 22.4-9.6l265.6-265.6 265.6 265.6c6.4 6.4 16 9.6 22.4 9.6s16-3.2 22.4-9.6c12.8-12.8 12.8-32 0-44.8L556.8 512z" p-id="4409"></path></svg>
+  </span>
+</div>
+  </div>
+</nav>
+  </header>
+  <main id="sea-main-wrapper" data-pagefind-body>
+    <article class="sea-page-card-wrapper">
+  <header class="sea-article-header">
+    <h1 class="sea-article-title">使用 Hexo 和 GitHub 创建的个人博客</h1>
+    
+      <div class="sea-post-meta sea-post-meta__center">
+        <div class="sea-post-time">
+  <svg t="1716964550804" class="sea-svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2621" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M805.49888 981.49888l-602.3168-0.76288c-86.59456-8.192-154.56768-81.3056-154.56768-170.01472L48.6144 291.73248c0-94.1568 76.60032-170.75712 170.7776-170.75712l586.10176 0c94.1568 0 170.73152 76.60032 170.73152 170.75712L976.22528 810.7008C976.2304 904.87296 899.63008 981.49888 805.49888 981.49888L805.49888 981.49888zM219.3664 190.57152c-55.79776 0-101.20192 45.38368-101.20192 101.18144l0 518.96832c0 55.79776 45.40416 101.20704 101.20192 101.20704l586.13248 0c55.77728 0 101.16096-45.40928 101.16096-101.20704L906.65984 291.73248c0-55.79776-45.38368-101.18656-101.16096-101.18656L219.3664 190.54592 219.3664 190.57152zM698.84416 290.51904c-25.60512 0-46.38208-20.77696-46.38208-46.38208l0-158.6688c0-25.6 20.77696-46.38208 46.38208-46.38208 25.6 0 46.38208 20.78208 46.38208 46.38208L745.22624 244.1216C745.22624 269.7472 724.46976 290.51904 698.84416 290.51904L698.84416 290.51904zM315.65824 290.51904c-25.60512 0-46.38208-20.77696-46.38208-46.38208l0-158.6688c0-25.6 20.77696-46.38208 46.38208-46.38208 25.6 0 46.38208 20.78208 46.38208 46.38208L362.04032 244.1216C362.04032 269.7472 341.28896 290.51904 315.65824 290.51904L315.65824 290.51904zM534.8864 794.78784l-44.27264 0c-25.6 0-46.38208-20.77696-46.38208-46.38208 0-25.6 20.78208-46.38208 46.38208-46.38208l44.27264 0c25.6 0 46.38208 20.78208 46.38208 46.38208C581.26848 774.01088 560.4864 794.78784 534.8864 794.78784L534.8864 794.78784zM930.79552 452.608 121.24672 452.608c-25.60512 0-46.38208-20.78208-46.38208-46.38208 0-25.60512 20.77696-46.38208 46.38208-46.38208l809.5744 0c25.6 0 46.38208 20.77696 46.38208 46.38208C977.2032 431.82592 956.42624 452.608 930.79552 452.608L930.79552 452.608zM327.92576 649.03168l-44.27264 0c-25.6 0-46.38208-20.78208-46.38208-46.38208 0-25.60512 20.78208-46.38208 46.38208-46.38208l44.27264 0c25.6 0 46.38208 20.77696 46.38208 46.38208C374.30784 628.25472 353.52576 649.03168 327.92576 649.03168L327.92576 649.03168zM534.8864 649.03168l-44.27264 0c-25.6 0-46.38208-20.78208-46.38208-46.38208 0-25.60512 20.78208-46.38208 46.38208-46.38208l44.27264 0c25.6 0 46.38208 20.77696 46.38208 46.38208S560.4864 649.03168 534.8864 649.03168L534.8864 649.03168zM741.27872 649.03168l-44.26752 0c-25.60512 0-46.38208-20.78208-46.38208-46.38208 0-25.60512 20.77696-46.38208 46.38208-46.38208l44.26752 0c25.60512 0 46.38208 20.77696 46.38208 46.38208C787.6608 628.25472 766.90944 649.03168 741.27872 649.03168L741.27872 649.03168zM327.92576 794.78784l-44.27264 0c-25.6 0-46.38208-20.77696-46.38208-46.38208 0-25.6 20.78208-46.38208 46.38208-46.38208l44.27264 0c25.6 0 46.38208 20.78208 46.38208 46.38208C374.30784 774.01088 353.52576 794.78784 327.92576 794.78784L327.92576 794.78784zM741.27872 794.78784l-44.26752 0c-25.60512 0-46.38208-20.77696-46.38208-46.38208 0-25.6 20.77696-46.38208 46.38208-46.38208l44.26752 0c25.60512 0 46.38208 20.78208 46.38208 46.38208C787.6608 774.01088 766.90944 794.78784 741.27872 794.78784L741.27872 794.78784z" p-id="2622"></path></svg>
+  <time datetime="2026-01-21T12:54:03.000Z">2026-01-21</time>
+</div>
+        
+        
+      </div>
+    
+  </header>
+  <div class="sea-doc">
+    
+    <div class="sea-article-content">
+      <h1 id="安装-git-工具"><a href="#安装-git-工具" class="headerlink" title="安装 git 工具"></a>安装 git 工具</h1><p>可以通过 <code>git</code>官方安装，也可以使用<code>scoop</code>来安装</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768996785814-4f0b7690-2ab9-4510-a16a-dcb64923c5bc.png" alt="img"></p>
+<p>输入以下命令检查 <code>git</code>安装是否成功：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="/2026/01/21/Create-a-personal-blog/1768996848890-ff7d482a-4e54-472a-be7b-f13cb4b3da7c.png" alt="img"></p>
+<h1 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h1><p>使用 <code>Scoop</code>安装<code>nvm</code>（<code>node</code> 包管理工具）</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768996937158-ecd435e5-3705-4502-9a14-862335406cbb.png" alt="img"></p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768996966396-e5bfa283-2e89-4b18-ad46-25ff115b79b7.png" alt="img"></p>
+<p>使用命令<code>nvm install 「版本号」</code>来安装<code>nodejs</code>，使用<code>nvm use 「版本号」</code>指定使用的<code>nodejs</code>，使用<code>node -v</code>查看 node 版本</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768997130676-1d760297-70b9-46c4-ac43-8679167afd12.png" alt="img"></p>
+<h1 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h1><p>使用 如下命令安装<code>hexo</code></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768997189646-4c0c11b8-cdf2-494c-91cd-fc3eb63b70c0.png" alt="img"></p>
+<p>测试<code>hexo</code>是否安装成功</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768997275272-af8296a2-001b-4786-a61d-f66744437b33.png" alt="img"></p>
+<h2 id="安装-hexo-依赖"><a href="#安装-hexo-依赖" class="headerlink" title="安装 hexo 依赖"></a>安装 hexo 依赖</h2><p>这一步可以留着到后面创建了博客目录后在博客目录下执行安装就行，无需全局安装。</p>
+<p>使用 <code>npm</code>安装</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--save</span> hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果出现问题，可以先用 Scoop 安装 pnpm，使用如下命令来安装依赖：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">pnpm</span> <span class="token function">add</span> hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h1 id="git-配置-SSH-Key"><a href="#git-配置-SSH-Key" class="headerlink" title="git 配置 SSH Key"></a>git 配置 SSH Key</h1><p>为什么要配置SSH key？<br>目的：可以免密的将本地的源码和资源上传到github，无需要每次都输账号和密码</p>
+<h2 id="生成-ssh-key"><a href="#生成-ssh-key" class="headerlink" title="生成 ssh-key"></a>生成 ssh-key</h2><p>输入生成命令后。连续回车三次即可</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-C</span> <span class="token string">"GitHub邮件地址"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>利用如下命令查看生成的 ssh-key</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> ~/.ssh/id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="/2026/01/21/Create-a-personal-blog/1768997700863-de3448dd-0e8e-4569-9665-0d3154ed5021.png" alt="img"></p>
+<h2 id="配置-ssh-key-到-GitHub"><a href="#配置-ssh-key-到-GitHub" class="headerlink" title="配置 ssh-key 到 GitHub"></a>配置 ssh-key 到 GitHub</h2><p><img src="/2026/01/21/Create-a-personal-blog/1768997760904-014a64ee-7ce6-42e5-886c-be4ef50d09a0.png" alt="img"></p>
+<h2 id="配置账号和密码"><a href="#配置账号和密码" class="headerlink" title="配置账号和密码"></a>配置账号和密码</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"FbyBruce"</span> <span class="token comment">#你的github用户名</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"xxx@163.com"</span> <span class="token comment">#填写你的github注册邮箱</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h2><p>使用如下命令测试 GitHub 连接：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果出现下面的情况，</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768997817573-3b280d40-ae56-41a9-bb11-bab8197674cc.png" alt="img"></p>
+<p>在<code>C:\Users\用户名\.ssh</code> 下新建一个 <code>config</code> 文件，写入如下内容：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Host github.com
+  Hostname ssh.github.com
+  Port <span class="token number">22</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>可以发现再次测试连接就可以连接成功了</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768998271196-9da2e81b-726a-47fd-8eba-7b14c53b3625.png" alt="img"></p>
+<h1 id="搭建个人博客"><a href="#搭建个人博客" class="headerlink" title="搭建个人博客"></a>搭建个人博客</h1><h2 id="heox的基本命令"><a href="#heox的基本命令" class="headerlink" title="heox的基本命令"></a>heox的基本命令</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token string">"postName"</span> <span class="token comment">#新建文章</span>
+hexo new page <span class="token string">"pageName"</span> <span class="token comment">#新建页面</span>
+hexo generate <span class="token comment">#生成静态页面至public目录</span>
+hexo server <span class="token comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span>
+hexo deploy <span class="token comment">#部署到GitHub</span>
+hexo <span class="token builtin class-name">help</span>  <span class="token comment"># 查看帮助</span>
+hexo version  <span class="token comment">#查看Hexo的版本</span>
+----------------------------------------------------------------
+<span class="token comment"># 可以使用首字母缩写</span>
+  - hexo g -<span class="token operator">></span> hexo generate
+  <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="创建本地博客"><a href="#创建本地博客" class="headerlink" title="创建本地博客"></a>创建本地博客</h2><p>在本地新建一个空的保存博客的存放目录，比如我放在了<code>E:\PersonalBlog\mysite</code></p>
+<p>进入到博客目录利用<code>hexo init</code>命令初始化个人博客</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768998589607-01fc8868-bcdf-4775-b6d7-e9d6d9e98863.png" alt="img"></p>
+<p>这里我创建一个新的测试文件展示：</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768998963685-71244c48-f6ed-4da1-b5cc-23a7ceee2971.png" alt="img"></p>
+<h2 id="生成静态网页"><a href="#生成静态网页" class="headerlink" title="生成静态网页"></a>生成静态网页</h2><p>使用<code>hexo g</code>生成静态网页，使用 <code>hexo s</code>进行本地运行预览</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768999314296-8b27325c-280d-4150-b05c-83f9e7b1cc5e.png" alt="img"></p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768999330867-27b428e1-fa42-4182-9241-94fb00ec4abf.png" alt="img"></p>
+<h2 id="部署到-GitHub"><a href="#部署到-GitHub" class="headerlink" title="部署到 GitHub"></a>部署到 GitHub</h2><p>新建一个 GitHub 仓库，注意仓库名，设置为公开，并添加<code>README</code>文件。</p>
+<p>注意：给仓库起名字必须是 <strong>用户名.github.io</strong></p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768958750231-7d765986-d6c5-4463-8059-1c1c01473fbf.png" alt="img"></p>
+<p>编辑<code>_config.yml</code> 文件，_config.yml在博客存放目录下</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>FbyBruce/FbyBruce.github.io.git <span class="token comment"># 改为自己的仓库地址</span>
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用<code>hexo d</code>命令部署到 GitHub</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768999670877-43ffb6eb-acee-4d4e-94f4-d8ade4d66060.png" alt="img"></p>
+<p>在浏览器访问<code>FbyBruce.github.io</code></p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1768999760455-30ed9ec6-05fa-44d0-b852-3b97cbd23476.png" alt="img"></p>
+<h1 id="编写博客"><a href="#编写博客" class="headerlink" title="编写博客"></a>编写博客</h1><p>比如新建一篇名为<code>Create a personal blog</code>的个人博客，可以看到创建成功之后给出的<code>md</code>文件地址</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769000119753-d013dfc8-b923-48c3-a39a-98575c98a74d.png" alt="img"></p>
+<p>我们通过这个<code>md</code>文件去写博客即可。</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769000321667-b3569a6e-c77e-44e1-a205-e3bcd6b10b57.png" alt="img"></p>
+<p>使用<code>hexo g</code>生成 <code>html</code>文件，执行<code>hexo s</code>在本地运行进行测试</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769000832140-39069643-6b55-4433-9c86-3441a990ada0.png" alt="img"></p>
+<p>但是文件图片没有正确显示出来。</p>
+<p>这是因为 Hexo 默认将所有文章资源（如图片）放在 <code>source/</code> 根目录下，而没有按文章组织，导致路径在部署后失效。</p>
+<p>从 <strong>Hexo 3.0+</strong> 开始，官方推荐使用 <code>post_asset_folder</code><strong>（文章资源文件夹）</strong> 功能来解决这个问题。</p>
+<h1 id="解决图片显示失败的问题"><a href="#解决图片显示失败的问题" class="headerlink" title="解决图片显示失败的问题"></a>解决图片显示失败的问题</h1><h2 id="第一步：启用-post-asset-folder"><a href="#第一步：启用-post-asset-folder" class="headerlink" title="第一步：启用 post_asset_folder"></a>第一步：启用 <strong>post_asset_folder</strong></h2><p>打开你的 Hexo 博客根目录下的 <code>_config.yml</code> 文件，找到并修改配置（默认是<code>false</code>）：</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769001112696-376891a1-4dd3-4cc4-a7c7-41e6246fd30e.png" alt="img"></p>
+<p>这个选项的作用是：<br>每次用 <code>hexo new &quot;文章名&quot;</code> 创建新文章时，<strong>自动创建一个同名文件夹</strong>，用于存放该文章的图片等资源。</p>
+<h2 id="第二步：安装插件-hexo-renderer-marked"><a href="#第二步：安装插件-hexo-renderer-marked" class="headerlink" title="第二步：安装插件 hexo-renderer-marked"></a>第二步：安装插件 hexo-renderer-marked</h2><p>该插件是官方推荐的插件，npm 安装失败可以使用 <code>pnpm add</code></p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769042943509-203f194a-57e6-49e4-88d9-18d7ee182c01.png" alt="img"></p>
+<p>在<code>_config.yml</code>中配置启用</p>
+<h2 id="第三步：正确引用图片"><a href="#第三步：正确引用图片" class="headerlink" title="第三步：正确引用图片"></a>第三步：正确引用图片</h2><p>开启上面的配置后，创建博客时，<code>hexo</code>会自动生成一个同名资源文件夹，在编写文档时把图片放到这个文件夹中即可</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769001294996-2ff049bf-1169-4999-a843-a1c132c56a55.png" alt="img"></p>
+<p>为了方便在<code>typora</code>中编写<code>md</code>时，自动创建一个同名文件夹存放图片，按照如下方式配置<code>Typora</code></p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769001919717-76924e8d-ee7d-4ff2-9b4a-04e4f4a6fa5c.png" alt="img"></p>
+<p>上传文件的路径如下，但这种方式在<code>Typora</code>中无法正常显示图片</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769043368009-42415742-86fd-49e4-8d8d-87b3031b32a4.png" alt="img"></p>
+<p>我们可以在<code>Typora</code>或者<code>vscode</code>中先按正常格式插入文件，然后使用<code>ctrl</code>+<code>H</code>整体替换图片文件路径前缀</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769044651427-dc620b81-4987-4734-8aa0-a93d2bfb7abf.png" alt="img"></p>
+<p>本地测试：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g
+hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2026/01/21/Create-a-personal-blog/1769043465760-3b45b0cd-af71-48ad-8e52-3dd50c7c8342.png" alt="img"></p>
+<h1 id="修改博客主题"><a href="#修改博客主题" class="headerlink" title="修改博客主题"></a>修改博客主题</h1><p><code>hexo</code>官网提供了很多主题</p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769005305193-27c3ac53-14c5-4a61-9bd5-663670625dff.png" alt="img"></p>
+<p>选择喜欢的打开其 GitHub 仓库 clone 到本地博客目录下的<code>themes</code>文件夹中</p>
+<p>在博客目录下的<code>_config.yml</code>文件中配置主题：</p>
+<p><img src="/2026/01/21/Create-a-personal-blog/1769005629609-15bac29e-057a-4ad6-b1ae-329fc5e447fd.png" alt="img"></p>
+<p>每个主题文件中又有对应自己的配置文件<code>_config.yml</code>，可以修改主题配置文件来修改具体主题样式。</p>
+<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="/2026/01/21/Create-a-personal-blog/1769043615139-2cce5b1a-e8fa-420e-9d93-45729c57069e.png" alt="img"></p>
+
+    </div>
+  </div>
+
+  
+    
+  <div class="sea-prev-next-wrapper">
+    
+      <div class="prev">
+        <svg t="1725418977480" class="sea-svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4239" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="4240"></path></svg>
+        <a class="link" href="/2026/01/21/test-blog/">
+          测试图片上传及显示
+        </a>
+      </div>
+    
+    
+      <div class="next">
+        <a class="link" href="/2026/01/21/hello-world/">
+          Hello World
+        </a>
+        <svg t="1725418993065" class="sea-svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6832" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M731.733333 480l-384-341.333333c-17.066667-14.933333-44.8-14.933333-59.733333 4.266666-14.933333 17.066667-14.933333 44.8 4.266667 59.733334L640 512 292.266667 821.333333c-17.066667 14.933333-19.2 42.666667-4.266667 59.733334 8.533333 8.533333 19.2 14.933333 32 14.933333 10.666667 0 19.2-4.266667 27.733333-10.666667l384-341.333333c8.533333-8.533333 14.933333-19.2 14.933334-32s-4.266667-23.466667-14.933334-32z" p-id="6833"></path></svg>
+      </div>
+    
+  </div>
+
+  
+</article>
+
+
+
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleIcon = document.querySelector('.sea-article-catalog-title .sea-svg-icon');
+    const tocContent = document.querySelector('.sea-article-catalog > .toc');
+    if (toggleIcon && tocContent) {
+      toggleIcon.addEventListener('click', function () {
+        tocContent.classList.toggle('sea-article-catalog-show');
+        toggleIcon.classList.toggle('sea-svg-icon-rotate');
+      });
+    }
+  });
+</script>
+  </main>
+  <footer id="sea-footer-container">
+  <div class="sea-footer-row">
+    <div class="sea-footer-menu-link">
+      
+        <a
+          class="sea-footer-link"
+          
+            target="_blank"
+          
+          href="https://github.com/FbyBruce/FbyBruce.github.io.git"
+        >
+          Github
+        </a>
+        <span class="sea-footer-link__dot">·</span>
+      
+    </div>
+  </div>
+  
+  
+  <div class="sea-footer-row">
+    <div class="sea-footer-copyright">
+      <span>©</span>
+      
+        2026
+      
+      <span>·</span>
+      FbyBruce
+    </div>
+    <span class="split-line">|</span>
+    <div class="sea-footer-theme-by">
+      Theme by <a class="theme" href="https://github.com/hai-zou/hexo-theme-sea" target="_blank">Sea</a>
+    </div>
+  </div>
+</footer>
+
+  
+<script src="/js/main.js" defer></script>
+
+
+<script src="/js/theme.js" defer></script>
+
+</body>
+</html>
