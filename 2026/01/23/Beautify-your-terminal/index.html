@@ -9,7 +9,7 @@
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
 <meta name="description" content="安装新版 PowerShell在 Microsoft Store 中安装新版 PowerShell   安装包管理工具 Scoop设置 Scoop 安装路径的环境变量先创建对应文件夹，再设置环境变量  重启电脑让环境变量生效 https:&#x2F;&#x2F;scoop.sh&#x2F;#&#x2F; 安装 Scoop在新版 PowerShell 中执行官网给出的安装命令： Set-ExecutionPolicy -Execution">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows端powershell的配置与美化">
+<meta property="og:title" content="powershell的配置与美化">
 <meta property="og:url" content="https://fbybruce.github.io/2026/01/23/Beautify-your-terminal/index.html">
 <meta property="og:site_name" content="拾柒的个人博客">
 <meta property="og:description" content="安装新版 PowerShell在 Microsoft Store 中安装新版 PowerShell   安装包管理工具 Scoop设置 Scoop 安装路径的环境变量先创建对应文件夹，再设置环境变量  重启电脑让环境变量生效 https:&#x2F;&#x2F;scoop.sh&#x2F;#&#x2F; 安装 Scoop在新版 PowerShell 中执行官网给出的安装命令： Set-ExecutionPolicy -Execution">
@@ -29,15 +29,17 @@
 <meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
 <meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
 <meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
+<meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
+<meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
 <meta property="article:published_time" content="2026-01-23T01:21:49.000Z">
-<meta property="article:modified_time" content="2026-01-23T01:39:43.639Z">
+<meta property="article:modified_time" content="2026-01-23T12:32:40.501Z">
 <meta property="article:author" content="FbyBruce">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://fbybruce.github.io/img/404.jpg">
 
 
-<title >Windows端powershell的配置与美化</title>
+<title >powershell的配置与美化</title>
 
 <!-- Favicon -->
 
@@ -76,7 +78,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"fbybruce.github.io","author":"FbyBruce","root":"/","typed_text":["一名想躺平的开发工程师","喜欢打瓦和健身"],"theme_version":"2.2.7","theme":{"switch":true,"default":"auto"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":true,"hidden":"/failure.ico","show_text":"(/≧▽≦/)欢迎回来！","hide_text":"(●—●)跑哪去啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"prismjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"01/22/2026 11:20:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"creative_commons":{"license":"by-nc-sa","language":"deed.zh-hans"},"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"},"search":{"enable":true,"type":"local","href":"","domain":"","path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2026-01-23 09:39:43"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2026-01-23 20:32:40"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.7" id="trm-switch-style">
@@ -256,7 +258,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            Windows端powershell的配置与美化
+                            powershell的配置与美化
                         </h1>
 
                         
@@ -434,28 +436,15 @@ notepad <span class="token variable">$PROFILE</span> <span class="token comment"
 oh-my-posh init pwsh <span class="token parameter variable">--config</span> <span class="token string">"<span class="token variable">$env</span>:POSH_THEMES_PATH/blue-owl.omp.json"</span> <span class="token operator">|</span> Invoke-Expression<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h1 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h1><p><img src="/2026/01/23/Beautify-your-terminal/1768200037229-28c5786a-a09f-41fe-b63c-8c968149e293.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h1 id="配置文件-Icon"><a href="#配置文件-Icon" class="headerlink" title="配置文件 Icon"></a>配置文件 Icon</h1><p>使用 Scoop 安装：</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/1769171376332-5da69d10-560e-477f-9bac-7e0c0f9a4d9d.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">scoop bucket <span class="token function">add</span> extras
+scoop <span class="token function">install</span> extras/terminal-icons<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2026/01/23/Beautify-your-terminal/1769171440307-9f98b194-b6e3-4f11-897e-a3bf49a86eb9.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 
 </article>
     
-    <div class="trm-reward">
-        
-            <span class="trm-reward-btn trm-glow" onclick='var qr = document.getElementById("qr"); qr.style.display = (qr.style.display === "none") ? "block" : "none";'>
-                <i class="iconfont fas fa-hand-holding-usd"></i>
-            </span>
-        
-        <p class="trm-reward-comment">如果觉得文章对你有帮助，欢迎打赏支持！</p>
-        <div id="qr" style="display:none;">
-            
-                <div style="display:inline-block">
-                    <a rel="noopener noreferrer" href='/img/paycode.jpg' target='_blank' >
-                       <img src="/img/paycode.jpg" alt="微信" loading="lazy">
-                    </a>
-                    <p>微信</p>
-                </div>
-            
-        </div>
-    </div>
-
     
 
 <ul class="trm-post-copyright">
@@ -465,7 +454,7 @@ oh-my-posh init pwsh <span class="token parameter variable">--config</span> <spa
     </li>
     <li class="trm-post-copyright-link">
         <strong>本文链接：</strong>
-        <a id="original-link" href="https://fbybruce.github.io/2026/01/23/Beautify-your-terminal/" title="Windows端powershell的配置与美化">https://fbybruce.github.io/2026/01/23/Beautify-your-terminal/</a>
+        <a id="original-link" href="https://fbybruce.github.io/2026/01/23/Beautify-your-terminal/" title="powershell的配置与美化">https://fbybruce.github.io/2026/01/23/Beautify-your-terminal/</a>
     </li>
     <li class="trm-post-copyright-license">
         <strong>版权声明：</strong>
@@ -568,7 +557,7 @@ oh-my-posh init pwsh <span class="token parameter variable">--config</span> <spa
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="安装新版 PowerShell"><a rel="nofollow" class="trm-toc-link" href="#安装新版-PowerShell"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">安装新版 PowerShell</span></a></li><li class="trm-toc-item trm-toc-level-1" title="安装包管理工具 Scoop"><a rel="nofollow" class="trm-toc-link" href="#安装包管理工具-Scoop"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">安装包管理工具 Scoop</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="设置 Scoop 安装路径的环境变量"><a rel="nofollow" class="trm-toc-link" href="#设置-Scoop-安装路径的环境变量"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">设置 Scoop 安装路径的环境变量</span></a></li><li class="trm-toc-item trm-toc-level-2" title="安装 Scoop"><a rel="nofollow" class="trm-toc-link" href="#安装-Scoop"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">安装 Scoop</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="安装 oh-my-posh"><a rel="nofollow" class="trm-toc-link" href="#安装-oh-my-posh"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">安装 oh-my-posh</span></a></li><li class="trm-toc-item trm-toc-level-1" title="安装并应用 Nerd 字体"><a rel="nofollow" class="trm-toc-link" href="#安装并应用-Nerd-字体"><span class="trm-toc-number">4.</span> <span class="trm-toc-text">安装并应用 Nerd 字体</span></a></li><li class="trm-toc-item trm-toc-level-1" title="字体安装完成以后，需要将字体应用到 Windows Terminal 显示项中。"><a rel="nofollow" class="trm-toc-link" href="#字体安装完成以后，需要将字体应用到-Windows-Terminal-显示项中。"><span class="trm-toc-number">5.</span> <span class="trm-toc-text">字体安装完成以后，需要将字体应用到 Windows Terminal 显示项中。</span></a></li><li class="trm-toc-item trm-toc-level-1" title="配置 oh-my-posh 主题"><a rel="nofollow" class="trm-toc-link" href="#配置-oh-my-posh-主题"><span class="trm-toc-number">6.</span> <span class="trm-toc-text">配置 oh-my-posh 主题</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="查看 oh-my-posh 主题"><a rel="nofollow" class="trm-toc-link" href="#查看-oh-my-posh-主题"><span class="trm-toc-number">6.1.</span> <span class="trm-toc-text">查看 oh-my-posh 主题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="效果展示"><a rel="nofollow" class="trm-toc-link" href="#效果展示"><span class="trm-toc-number">7.</span> <span class="trm-toc-text">效果展示</span></a></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="安装新版 PowerShell"><a rel="nofollow" class="trm-toc-link" href="#安装新版-PowerShell"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">安装新版 PowerShell</span></a></li><li class="trm-toc-item trm-toc-level-1" title="安装包管理工具 Scoop"><a rel="nofollow" class="trm-toc-link" href="#安装包管理工具-Scoop"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">安装包管理工具 Scoop</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="设置 Scoop 安装路径的环境变量"><a rel="nofollow" class="trm-toc-link" href="#设置-Scoop-安装路径的环境变量"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">设置 Scoop 安装路径的环境变量</span></a></li><li class="trm-toc-item trm-toc-level-2" title="安装 Scoop"><a rel="nofollow" class="trm-toc-link" href="#安装-Scoop"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">安装 Scoop</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="安装 oh-my-posh"><a rel="nofollow" class="trm-toc-link" href="#安装-oh-my-posh"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">安装 oh-my-posh</span></a></li><li class="trm-toc-item trm-toc-level-1" title="安装并应用 Nerd 字体"><a rel="nofollow" class="trm-toc-link" href="#安装并应用-Nerd-字体"><span class="trm-toc-number">4.</span> <span class="trm-toc-text">安装并应用 Nerd 字体</span></a></li><li class="trm-toc-item trm-toc-level-1" title="字体安装完成以后，需要将字体应用到 Windows Terminal 显示项中。"><a rel="nofollow" class="trm-toc-link" href="#字体安装完成以后，需要将字体应用到-Windows-Terminal-显示项中。"><span class="trm-toc-number">5.</span> <span class="trm-toc-text">字体安装完成以后，需要将字体应用到 Windows Terminal 显示项中。</span></a></li><li class="trm-toc-item trm-toc-level-1" title="配置 oh-my-posh 主题"><a rel="nofollow" class="trm-toc-link" href="#配置-oh-my-posh-主题"><span class="trm-toc-number">6.</span> <span class="trm-toc-text">配置 oh-my-posh 主题</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="查看 oh-my-posh 主题"><a rel="nofollow" class="trm-toc-link" href="#查看-oh-my-posh-主题"><span class="trm-toc-number">6.1.</span> <span class="trm-toc-text">查看 oh-my-posh 主题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="效果展示"><a rel="nofollow" class="trm-toc-link" href="#效果展示"><span class="trm-toc-number">7.</span> <span class="trm-toc-text">效果展示</span></a></li><li class="trm-toc-item trm-toc-level-1" title="配置文件 Icon"><a rel="nofollow" class="trm-toc-link" href="#配置文件-Icon"><span class="trm-toc-number">8.</span> <span class="trm-toc-text">配置文件 Icon</span></a></li></ol>
       </div>
     </div>
 
