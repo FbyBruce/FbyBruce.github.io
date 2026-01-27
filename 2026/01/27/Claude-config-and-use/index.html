@@ -7,12 +7,12 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="安装新版 PowerShell在 Microsoft Store 中安装新版 PowerShell   安装包管理工具 Scoop设置 Scoop 安装路径的环境变量先创建对应文件夹，再设置环境变量  重启电脑让环境变量生效 https:&#x2F;&#x2F;scoop.sh&#x2F;#&#x2F; 安装 Scoop在新版 PowerShell 中执行官网给出的安装命令： Set-ExecutionPolicy -Execution">
+<meta name="description" content="Claude 安装 Claude官网安装：    可以使用Scoop进行安装   安装之后在终端输入claude启动 Claude，但初次直接使用访问的是 Anthropic 的 Claude 模型，在国内很多人是没法访问这个模型的，会报下面的错误。  安装 cc-switch为了解决上面的问题，我们可以安装这个 cc-switch，这个工具可以方便我们对Claude Code的模型 API 等进">
 <meta property="og:type" content="article">
-<meta property="og:title" content="powershell的配置与美化">
-<meta property="og:url" content="https://fbybruce.github.io/2026/01/23/Beautify-your-terminal/index.html">
+<meta property="og:title" content="Claude配置与使用姿势">
+<meta property="og:url" content="https://fbybruce.github.io/2026/01/27/Claude-config-and-use/index.html">
 <meta property="og:site_name" content="拾柒的个人博客">
-<meta property="og:description" content="安装新版 PowerShell在 Microsoft Store 中安装新版 PowerShell   安装包管理工具 Scoop设置 Scoop 安装路径的环境变量先创建对应文件夹，再设置环境变量  重启电脑让环境变量生效 https:&#x2F;&#x2F;scoop.sh&#x2F;#&#x2F; 安装 Scoop在新版 PowerShell 中执行官网给出的安装命令： Set-ExecutionPolicy -Execution">
+<meta property="og:description" content="Claude 安装 Claude官网安装：    可以使用Scoop进行安装   安装之后在终端输入claude启动 Claude，但初次直接使用访问的是 Anthropic 的 Claude 模型，在国内很多人是没法访问这个模型的，会报下面的错误。  安装 cc-switch为了解决上面的问题，我们可以安装这个 cc-switch，这个工具可以方便我们对Claude Code的模型 API 等进">
 <meta property="og:locale">
 <meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
 <meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
@@ -31,15 +31,18 @@
 <meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
 <meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
 <meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
-<meta property="article:published_time" content="2026-01-23T01:21:49.000Z">
-<meta property="article:modified_time" content="2026-01-23T12:32:40.501Z">
+<meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
+<meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
+<meta property="og:image" content="https://fbybruce.github.io/img/404.jpg">
+<meta property="article:published_time" content="2026-01-27T02:49:14.000Z">
+<meta property="article:modified_time" content="2026-01-27T02:56:50.187Z">
 <meta property="article:author" content="FbyBruce">
-<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Claude">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://fbybruce.github.io/img/404.jpg">
 
 
-<title >powershell的配置与美化</title>
+<title >Claude配置与使用姿势</title>
 
 <!-- Favicon -->
 
@@ -78,7 +81,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"fbybruce.github.io","author":"FbyBruce","root":"/","typed_text":["一名想躺平的开发工程师","喜欢打瓦和健身"],"theme_version":"2.2.7","theme":{"switch":true,"default":"auto"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":true,"hidden":"/failure.ico","show_text":"(/≧▽≦/)欢迎回来！","hide_text":"(●—●)跑哪去啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"prismjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"01/22/2026 11:20:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"creative_commons":{"license":"by-nc-sa","language":"deed.zh-hans"},"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"},"search":{"enable":true,"type":"local","href":"","domain":"","path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2026-01-23 20:32:40"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2026-01-27 10:56:50"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.7" id="trm-switch-style">
@@ -258,7 +261,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            powershell的配置与美化
+                            Claude配置与使用姿势
                         </h1>
 
                         
@@ -369,13 +372,13 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-            01/23
+            01/27
         </div>
     </div>
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            09:21
+            10:49
         </div>
     </div>
     <div class="col-sm-4">
@@ -387,61 +390,48 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="安装新版-PowerShell"><a href="#安装新版-PowerShell" class="headerlink" title="安装新版 PowerShell"></a>安装新版 PowerShell</h1><p>在 Microsoft Store 中安装新版 PowerShell</p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768196582469-5aaae293-1558-470e-bab2-6f93fa8222b6.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768196647664-cadbcfd7-3289-438a-8a86-87c0b1535d05.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h1 id="安装包管理工具-Scoop"><a href="#安装包管理工具-Scoop" class="headerlink" title="安装包管理工具 Scoop"></a>安装包管理工具 Scoop</h1><h2 id="设置-Scoop-安装路径的环境变量"><a href="#设置-Scoop-安装路径的环境变量" class="headerlink" title="设置 Scoop 安装路径的环境变量"></a>设置 Scoop 安装路径的环境变量</h2><p>先创建对应文件夹，再设置环境变量</p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768196818108-a04b6c8d-c76f-4d63-86e8-caa87a61152d.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>重启电脑让环境变量生效</p>
-<p><a target="_blank" rel="noopener" href="https://scoop.sh/#/">https://scoop.sh/#/</a></p>
-<h2 id="安装-Scoop"><a href="#安装-Scoop" class="headerlink" title="安装 Scoop"></a>安装 Scoop</h2><p>在新版 PowerShell 中执行官网给出的安装命令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Set-ExecutionPolicy <span class="token parameter variable">-ExecutionPolicy</span> RemoteSigned <span class="token parameter variable">-Scope</span> CurrentUser
-Invoke-RestMethod <span class="token parameter variable">-Uri</span> https://get.scoop.sh <span class="token operator">|</span> Invoke-Expression<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+    <h1 id="Claude-安装"><a href="#Claude-安装" class="headerlink" title="Claude 安装"></a>Claude 安装</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/overview">Claude</a>官网安装：</li>
+</ol>
+<p><img src="/2026/01/23/Beautify-your-terminal/769479661133-c50e7a25-54a5-4252-8bda-071cd0a3befa.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ol>
+<li>可以使用<code>Scoop</code>进行安装</li>
+</ol>
+<p><img src="/2026/01/23/Beautify-your-terminal/769479624840-92c73187-da66-48de-9307-40da2f5ce59e.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>安装之后在终端输入<code>claude</code>启动 Claude，但初次直接使用访问的是 Anthropic 的 Claude 模型，在国内很多人是没法访问这个模型的，会报下面的错误。</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769473541824-0f4ba0a5-3b01-42d9-ab51-7a01910e7030.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h1 id="安装-cc-switch"><a href="#安装-cc-switch" class="headerlink" title="安装 cc-switch"></a>安装 cc-switch</h1><p>为了解决上面的问题，我们可以安装这个 <code>cc-switch</code>，这个工具可以方便我们对<code>Claude Code</code>的模型 API 等进行配置。</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769480286161-f5b98be1-e84f-4b7e-8b55-8c0fce5385a3.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>可以从<a target="_blank" rel="noopener" href="https://github.com/farion1231/cc-switch?tab=readme-ov-file">GitHub 官网</a>安装，我这里同样使用<code>Scoop</code>安装</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769473559461-66c75f6b-7d6a-4d35-aef6-26f29d7c6fdc.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>安装好之后就是下面这样一个工具，这里可以配置模型 API，MCP，Skills 等</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769473582842-859999e3-c481-4f29-94cb-d8d4415f4575.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>点击右上角的➕，选择模型供应商，配置你的 API。我这里使用阿里云百炼配置<code>QWen-Coder</code></p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769480765234-677b9712-a541-4a01-8498-1de8b0ffe855.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>重启终端再次尝试通过<code>claude</code>启动 Claude，可能还是会报上面同样的无法访问的错误，我们只需要在配置文件加上一行配置即可绕过地区限制（即修改**.claude.json**文件）</p>
+<p>在<code>C:\Users\你的用户名</code>目录下找到<code>**.claude.json**</code><strong>文件，</strong>添加如下配置：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"hasCompletedOnboarding"</span><span class="token operator">:</span> <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="/2026/01/23/Beautify-your-terminal/1768196702324-5fa60b1b-d2d2-49d6-91c2-0ee771708dae.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h1 id="安装-oh-my-posh"><a href="#安装-oh-my-posh" class="headerlink" title="安装 oh-my-posh"></a>安装 oh-my-posh</h1><p><a target="_blank" rel="noopener" href="https://ohmyposh.dev/">https://ohmyposh.dev/</a></p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768197021136-e994ea9e-3ce2-449a-aa40-f67800eb9222.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>在 Scoop 官网找oh-my-posh 的安装命令：</p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768197078784-78a50bc9-89d6-4ef3-aa3b-a635b073cce9.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768197095705-367605df-74e0-45ab-b8cc-313912448776.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h1 id="安装并应用-Nerd-字体"><a href="#安装并应用-Nerd-字体" class="headerlink" title="安装并应用 Nerd 字体"></a>安装并应用 Nerd 字体</h1><p><img src="/2026/01/23/Beautify-your-terminal/1768197419734-a75e2243-794f-4685-8740-56bf55451a4e.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><code>oh-my-posh</code> 中的主题的 Icon 需要 <strong>Nerd Font</strong> 字体的支持。</p>
-<p>从 <a target="_blank" rel="noopener" href="https://www.nerdfonts.com/font-downloads">Nerd Fonts 字体下载</a> 列表下载任意字体，然后完成字体的安装（下载下来是字体压缩包，解压后直接将解压文件里的字体系列全都执行安装操作即可）。</p>
-<p>也可以使用 Scoop 来安装 Nerd Font 字体（比如选择<code>JetBrainsMono Nerd Font</code>）</p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768197294422-72df0c64-00d3-43bb-b816-73d395fda978.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>如果本地开启了梯子还是无法添加、访问到 GitHub 仓库，可以给 Scoop 配置代理：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 在本地打开梯子，ip地址就是127.0.0.1，端口是梯子开启的端口，比如我的是7897</span>
-scoop config proxy 「127.0.0.1:7897」<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="/2026/01/23/Beautify-your-terminal/1768198170148-d543001f-8158-4bf5-b587-40e1431cd37c.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768198044211-675ecc14-b1c3-4ff7-bf16-b5a0c2e4a9c1.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768198330297-67dbb87d-60b8-4884-9f37-f5242de463bb.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>结束后可以用如下命令取消代理设置：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">scoop config <span class="token function">rm</span> proxy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h1 id="字体安装完成以后，需要将字体应用到-Windows-Terminal-显示项中。"><a href="#字体安装完成以后，需要将字体应用到-Windows-Terminal-显示项中。" class="headerlink" title="字体安装完成以后，需要将字体应用到 Windows Terminal 显示项中。"></a>字体安装完成以后，需要将字体应用到 Windows Terminal 显示项中。</h1><p><img src="/2026/01/23/Beautify-your-terminal/1768198492142-13dcfb4c-6cdd-4c34-a07a-f7fc1c6c72df.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h1 id="配置-oh-my-posh-主题"><a href="#配置-oh-my-posh-主题" class="headerlink" title="配置 oh-my-posh 主题"></a>配置 oh-my-posh 主题</h1><h2 id="查看-oh-my-posh-主题"><a href="#查看-oh-my-posh-主题" class="headerlink" title="查看 oh-my-posh 主题"></a>查看 oh-my-posh 主题</h2><p><a target="_blank" rel="noopener" href="https://ohmyposh.dev/docs/themes">https://ohmyposh.dev/docs/themes</a></p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1768199207161-08f65372-028d-4cd2-b9db-24805cfe79d1.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>在 PowerShell 中执行以下命令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># blue-owl 是主题名，换成想要的主题名即可</span>
-oh-my-posh init pwsh <span class="token parameter variable">--config</span> ~/「blue-owl」.omp.json <span class="token operator">|</span> Invoke-Expression<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>再次打开恢复了原来的样子，先打开 <code>PowerShell</code> 的配置文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">code <span class="token variable">$PROFILE</span> <span class="token comment"># 使用默认编辑器打开配置文件</span>
-<span class="token comment"># 或</span>
-notepad <span class="token variable">$PROFILE</span> <span class="token comment"># 使用windows系统的文本编辑器打开配置文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>将下面的语句复制到配置文件中，记得修改为自己喜欢的主题</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 使用 oh-my-posh 主题</span>
-oh-my-posh init pwsh <span class="token parameter variable">--config</span> <span class="token string">"<span class="token variable">$env</span>:POSH_THEMES_PATH/blue-owl.omp.json"</span> <span class="token operator">|</span> Invoke-Expression<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h1 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h1><p><img src="/2026/01/23/Beautify-your-terminal/1768200037229-28c5786a-a09f-41fe-b63c-8c968149e293.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h1 id="配置文件-Icon"><a href="#配置文件-Icon" class="headerlink" title="配置文件 Icon"></a>配置文件 Icon</h1><p>使用 Scoop 安装：</p>
-<p><img src="/2026/01/23/Beautify-your-terminal/1769171376332-5da69d10-560e-477f-9bac-7e0c0f9a4d9d.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">scoop bucket <span class="token function">add</span> extras
-scoop <span class="token function">install</span> extras/terminal-icons<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="/2026/01/23/Beautify-your-terminal/1769171440307-9f98b194-b6e3-4f11-897e-a3bf49a86eb9.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>再次尝试即可正常启动</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769474263862-71bfc30f-8085-4021-b437-da5c7a27c3d9.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769475733494-5f5eeba7-6a07-4eca-88ed-8f473c6283ae.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h1 id="简单实战"><a href="#简单实战" class="headerlink" title="简单实战"></a>简单实战</h1><p><img src="/2026/01/23/Beautify-your-terminal/769475791366-13b9e683-2e54-4455-a579-80a00af491d9.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769475885363-887680d6-ba68-4fc9-ae49-dce8314d6460.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>通过 Claude 打开运行这个 index.html 文件，在终端中输入<code>!</code>，终端就处在<code>bash</code>模式下了，输入<code>start index.html</code>（Windows）来运行这个 html，macOS 中利用<code>open index.html</code></p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769475951216-ec60fa37-3842-4f28-ba7e-39da2c81719e.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="/2026/01/23/Beautify-your-terminal/769476029330-10e52032-486f-4009-a50d-c6283920d8bf.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>下面改为前端流行架构，按<code>shift + Tab</code>切换为 plan mode 模式，让 Claude 在执行之前先帮我们做计划</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769476738315-cd0611ec-a2b2-4d25-b291-a7f4ddc828d0.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769476991258-5ae33b74-fad0-4665-86be-0e8214793f69.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769477007575-0a3feed0-256e-41db-bb45-6a3ba0591e3d.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'> 如果我们有新的要求，可以选择 4 并输入要求</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769477196417-eaa8a771-b898-4442-87d4-e78baa924043.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769477210700-75920907-dade-440d-bd06-97b4dfb9b3ad.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>后续可能还会让我们选择模式，如果你希望每次执行任务前都亲自检查，可以选择每次都询问，或者直接选择自动接受，则不再询问。</p>
+<p>但后续需要 Claude 执行终端命令时还是会询问，我们可以在开启 Claude 时加一个参数<code>--dangerously-skip-permissions</code>，这样 Claude 就可以随意执行终端命令不再询问，但存在安全隐患，不建议开启。</p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769478065291-47888e65-4213-4b65-9403-7b73ee3f72cb.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2026/01/23/Beautify-your-terminal/769479129491-b513ed1c-9f18-4a1f-85a8-306d0975f030.png" alt="img"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<hr>
+<p>在 Claude 中还有 MCP、Skills 等各种使用姿势，后期我会逐渐补充~</p>
 
 </article>
     
@@ -454,7 +444,7 @@ scoop <span class="token function">install</span> extras/terminal-icons<span ari
     </li>
     <li class="trm-post-copyright-link">
         <strong>本文链接：</strong>
-        <a id="original-link" href="https://fbybruce.github.io/2026/01/23/Beautify-your-terminal/" title="powershell的配置与美化">https://fbybruce.github.io/2026/01/23/Beautify-your-terminal/</a>
+        <a id="original-link" href="https://fbybruce.github.io/2026/01/27/Claude-config-and-use/" title="Claude配置与使用姿势">https://fbybruce.github.io/2026/01/27/Claude-config-and-use/</a>
     </li>
     <li class="trm-post-copyright-license">
         <strong>版权声明：</strong>
@@ -473,48 +463,13 @@ scoop <span class="token function">install</span> extras/terminal-icons<span ari
         </h5>
     </div>
     
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2026/01/27/Claude-config-and-use/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="/img/cover/claude-cover.png">
-            
-        </a>
-        
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/AI/">
-                    AI
-                </a>
-            </div>
-            <h5>
-                <a href="/2026/01/27/Claude-config-and-use/" class="trm-anima-link">
-                    Claude配置与使用姿势
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>26/01/27</li>
-                <li>10:49</li>
-                
-                    <li>539</li>
-                
-                
-                    <li>1</li>
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
     
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2026/01/21/Create-a-personal-blog/" class="trm-cover-frame trm-anima-link">
+        <a href="/2026/01/23/Beautify-your-terminal/" class="trm-cover-frame trm-anima-link">
             
             
-                <img alt="cover" class="no-fancybox" src="/img/cover/create-blog-cover.png">
+                <img alt="cover" class="no-fancybox" src="/img/cover/beautify-terminal-cover.png">
             
         </a>
         
@@ -525,19 +480,19 @@ scoop <span class="token function">install</span> extras/terminal-icons<span ari
                 </a>
             </div>
             <h5>
-                <a href="/2026/01/21/Create-a-personal-blog/" class="trm-anima-link">
-                    使用 Hexo 和 GitHub 创建个人博客
+                <a href="/2026/01/23/Beautify-your-terminal/" class="trm-anima-link">
+                    powershell的配置与美化
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>26/01/21</li>
-                <li>20:54</li>
+                <li>26/01/23</li>
+                <li>09:21</li>
                 
-                    <li>1.3k</li>
+                    <li>515</li>
                 
                 
-                    <li>4</li>
+                    <li>2</li>
                 
             </ul>
         </div>
@@ -592,7 +547,7 @@ scoop <span class="token function">install</span> extras/terminal-icons<span ari
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="安装新版 PowerShell"><a rel="nofollow" class="trm-toc-link" href="#安装新版-PowerShell"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">安装新版 PowerShell</span></a></li><li class="trm-toc-item trm-toc-level-1" title="安装包管理工具 Scoop"><a rel="nofollow" class="trm-toc-link" href="#安装包管理工具-Scoop"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">安装包管理工具 Scoop</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="设置 Scoop 安装路径的环境变量"><a rel="nofollow" class="trm-toc-link" href="#设置-Scoop-安装路径的环境变量"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">设置 Scoop 安装路径的环境变量</span></a></li><li class="trm-toc-item trm-toc-level-2" title="安装 Scoop"><a rel="nofollow" class="trm-toc-link" href="#安装-Scoop"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">安装 Scoop</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="安装 oh-my-posh"><a rel="nofollow" class="trm-toc-link" href="#安装-oh-my-posh"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">安装 oh-my-posh</span></a></li><li class="trm-toc-item trm-toc-level-1" title="安装并应用 Nerd 字体"><a rel="nofollow" class="trm-toc-link" href="#安装并应用-Nerd-字体"><span class="trm-toc-number">4.</span> <span class="trm-toc-text">安装并应用 Nerd 字体</span></a></li><li class="trm-toc-item trm-toc-level-1" title="字体安装完成以后，需要将字体应用到 Windows Terminal 显示项中。"><a rel="nofollow" class="trm-toc-link" href="#字体安装完成以后，需要将字体应用到-Windows-Terminal-显示项中。"><span class="trm-toc-number">5.</span> <span class="trm-toc-text">字体安装完成以后，需要将字体应用到 Windows Terminal 显示项中。</span></a></li><li class="trm-toc-item trm-toc-level-1" title="配置 oh-my-posh 主题"><a rel="nofollow" class="trm-toc-link" href="#配置-oh-my-posh-主题"><span class="trm-toc-number">6.</span> <span class="trm-toc-text">配置 oh-my-posh 主题</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="查看 oh-my-posh 主题"><a rel="nofollow" class="trm-toc-link" href="#查看-oh-my-posh-主题"><span class="trm-toc-number">6.1.</span> <span class="trm-toc-text">查看 oh-my-posh 主题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="效果展示"><a rel="nofollow" class="trm-toc-link" href="#效果展示"><span class="trm-toc-number">7.</span> <span class="trm-toc-text">效果展示</span></a></li><li class="trm-toc-item trm-toc-level-1" title="配置文件 Icon"><a rel="nofollow" class="trm-toc-link" href="#配置文件-Icon"><span class="trm-toc-number">8.</span> <span class="trm-toc-text">配置文件 Icon</span></a></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Claude 安装"><a rel="nofollow" class="trm-toc-link" href="#Claude-安装"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Claude 安装</span></a></li><li class="trm-toc-item trm-toc-level-1" title="安装 cc-switch"><a rel="nofollow" class="trm-toc-link" href="#安装-cc-switch"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">安装 cc-switch</span></a></li><li class="trm-toc-item trm-toc-level-1" title="简单实战"><a rel="nofollow" class="trm-toc-link" href="#简单实战"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">简单实战</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="效果展示"><a rel="nofollow" class="trm-toc-link" href="#效果展示"><span class="trm-toc-number">3.1.</span> <span class="trm-toc-text">效果展示</span></a></li></ol></li></ol>
       </div>
     </div>
 
